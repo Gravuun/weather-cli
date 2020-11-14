@@ -50,7 +50,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         matches.value_of("COUNTRY").unwrap_or("No country selected"),
     );
     let mut units: String = String::from("imperial");
-    let mut temp: String = String::from("\u{2109}");
+    let mut temp: String = String::from("\u{00B0}F");
     let mut speed: String = String::from("miles per hour");
 
     // Check for unit flags and if so change units
@@ -60,7 +60,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         speed = String::from("meters per second");
     } else if matches.is_present("m") {
         units = String::from("metric");
-        temp = String::from("\u{2103}");
+        temp = String::from("\u{00B0}C");
         speed = String::from("meters per second");
     }
 
