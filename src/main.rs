@@ -43,7 +43,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .get_matches();
 
     // Set API key, grab cit an country (if it exists, else default value), units default to imperial
-    let app_id: String = String::from("936072078a6adb16ab7e39e3c889ebe0");
+    let app_id: String = String::from("***REMOVED***");
     let query;
     let (city, country) = (
         matches.value_of("CITY").unwrap(),
